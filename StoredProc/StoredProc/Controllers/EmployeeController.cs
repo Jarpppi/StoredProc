@@ -172,17 +172,20 @@ namespace StoredProc.Controllers
                 }
                 if (lastName != null)
                 {
-                    SqlParameter param_ln = new SqlParameter(" AND LastName=@LastName", lastName);
+                    stringBuilder.Append(" AND lastName=@lastName");
+                    SqlParameter param_ln = new SqlParameter("@lastName", lastName);
                     cmd.Parameters.Add(param_ln);
                 }
                 if (gender != null)
                 {
-                    SqlParameter param_g = new SqlParameter(" AND Gender=@Gender", gender);
+                    stringBuilder.Append(" AND gender=@gender");
+                    SqlParameter param_g = new SqlParameter("@gender", gender);
                     cmd.Parameters.Add(param_g);
                 }
                 if (salary != 0)
                 {
-                    SqlParameter param_s = new SqlParameter(" AND Salary=@Salary", salary);
+                    stringBuilder.Append(" AND salary=@salary");
+                    SqlParameter param_s = new SqlParameter("@salary", salary);
                     cmd.Parameters.Add(param_s);
                 }
                 con.Open();

@@ -3,7 +3,7 @@
         <div class="panel-heading">
             <h3>Employee Search Form</h3>
         </div>
-        <form asp-controller="Employee" asp-action="DynamicSQL">
+        <form asp-controller="Employee" asp-action="SearchWithDynamic">
             <div>
                 <label for="firstName">First Name</label>
                 <br />
@@ -26,12 +26,12 @@
             </div>
             <br />
             <div>
-                <label for="salary">DynamicSQL</label>
+                <label for="salary">SearchWithDynamic</label>
                 <br />
-                <input type="number" name="DynamicSQL" placeholder="DynamicSQL" />
+                <input type="number" name="SearchWithDynamic" placeholder="SearchWithDynamic" />
             </div>
             <br />
-            <input type="submit" value="DynamicSQL" />
+            <input type="submit" value="SearchWithDynamic" />
         </form>
         <table class="table table-hover">
             <thead>
